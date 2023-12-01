@@ -29,7 +29,7 @@ def main():
     with open("day_1/input.txt", 'r') as f:
         
         lines = [line.strip() for line in f]
-        print(f"part 1: , part 2: {part_two(lines)}")
+        print(f"part 1: {part_one(lines)}, part 2: {part_two(lines)}")
 
 if __name__ == "__main__":
     main()
