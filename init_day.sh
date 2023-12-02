@@ -4,6 +4,7 @@ function make_dir()
 {
     mkdir -p "${DIR_NAME}"
     touch $PY_FILE
+    touch $FILE_NAME_2
     cp template.py $PY_FILE
 }
 
@@ -23,6 +24,7 @@ SESSION_TOKEN=$(grep SESSION .env | sed s/SESSION=//g)
 
 DIR_NAME="day_${DAY}"
 FILE_NAME="${DIR_NAME}/input.txt"
+FILE_NAME_2="${DIR_NAME}/test_input.txt"
 PY_FILE="${DIR_NAME}/day_${DAY}.py"
 
 make_dir
