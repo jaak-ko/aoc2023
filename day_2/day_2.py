@@ -7,6 +7,7 @@ cubes = {
         "red": 12
         }
 
+
 def part_one(lines):
 
     count = 0
@@ -18,6 +19,7 @@ def part_one(lines):
             count += int(line.split(':')[0].split(' ')[-1])
 
     return count
+
 
 def part_two(lines):
      
