@@ -32,8 +32,6 @@ def part_two(lines):
 
     # return true if num is adjacent to mark
     def is_adjacent_to_mark(num, mark):
-        if num == (9, (1, 3)):
-            print(mark)
 
         possible_ys = range(mark[0] - 1, mark[0] + 2)
         possible_xs = range(mark[1] - 1, mark[1] + 2)
@@ -47,13 +45,12 @@ def part_two(lines):
 
         if len(maybe_gear_ratios) == 2:
             return np.prod(list(maybe_gear_ratios.values()))
-        
         return 0
             
     nums, marks = extract_nums_and_marks(lines)
 
     possible_gears = dict(list(filter(lambda x: x[1] == '*', marks.items())))
-    
+
     return sum([gear_ratio(x, nums) for x in possible_gears.items()]) # return sum of gear ratios
 
 
