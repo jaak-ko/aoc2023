@@ -21,7 +21,7 @@ def part_two(lines):
         cards.update({c:cards[c] + 1 + cards[card] for c in wins})
 
         if card +1 in card_wins.keys():
-            fucking_recursion(card+1, card_wins, cards)
+            cards = fucking_recursion(card+1, card_wins, cards)
             
         return cards
 
