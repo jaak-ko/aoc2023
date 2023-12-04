@@ -1,4 +1,5 @@
 import numpy as np
+import re
 
 def part_one(lines):
     pass
