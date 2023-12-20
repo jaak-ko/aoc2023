@@ -7,7 +7,7 @@ def parts(lines):
     
     nexts = {"left": [], "right": []}
     for h in lines:
-        hs = [deque(map(int, re.findall(r'[+-]?\d+', h))), ]        
+        hs = [deque(map(int, re.findall(r'[-]?\d+', h))), ]        
         while any(item != 0 for item in hs[-1]):
             hs.append(deque([hs[-1][i+1] - hs[-1][i] for i in range(len(hs[-1])-1)]))
 
